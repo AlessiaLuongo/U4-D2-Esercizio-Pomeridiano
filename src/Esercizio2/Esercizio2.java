@@ -2,29 +2,16 @@ package Esercizio2;
 
 public class Esercizio2 {
     public static void main(String[] args) {
-        System.out.println(stampaInLettere(10));
+
 
     }
     public static String stampaInLettere(int numeroInserito){
-        switch (numeroInserito){
-            case 0:{
-                return "zero";
-
-            }
-            case 1:{
-                return "uno";
-
-            }
-            case 2 :{
-                return "due";
-
-            }
-            case 3 :{
-                return "tre";
-
-            }
-            default: return "Il numero inserito non rispetta i nostri standard";
-
-        }
+        return switch (numeroInserito) {
+            case 0 -> "zero";
+            case 1 -> "uno";
+            case 2 -> "due";
+            case 3 -> "tre";
+            default -> "Il numero inserito non rispetta i nostri standard";
+        };
     }
 }
