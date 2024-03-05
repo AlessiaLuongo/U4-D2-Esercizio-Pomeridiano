@@ -13,16 +13,17 @@ public class Esercizio1 {
     }
     public static boolean annoBisestile(int annoInserito){
         if (annoInserito % 4 == 0) {
-            return true;
-        } else if (annoInserito % 100 == 0 && annoInserito % 400 == 0 ) {
-            return true;
-        } else{
-            return false;
+            if (annoInserito % 100 == 0) {
+                return annoInserito % 400 == 0;
+            } else {
+                return true;
+            }
         }
+        return false;
+    }
     }
 
 
-    }
 
 
 
